@@ -5,15 +5,13 @@ This is a simple BBCode parser.
 
 # Installation
 ```bash
-npm install js-bbcode-parser --save
+npm install ts-bbcode-parser --save
 ```
 
 # How To
-```javascript
-// this imports the default parser
-import bbCodeParser from 'js-bbcode-parser';
+```typescript
 // this import the class constructor of the parser
-import BBCodeParser from 'js-bbcode-parser/src/index.js';
+import BBCodeParser from 'ts-bbcode-parser';
 
 // use to create a clean parser
 const parserA = new BBCodeParser({});
@@ -25,10 +23,10 @@ bbCodeParser.setCodes({});
 # Usage
 ## Default
 A default BBCode parser is available.
-```javascript
-import bbCodeParser from 'js-bbcode-parser';
+```typescript
+import BBCodeParser from 'ts-bbcode-parser';
 
-console.log(bbCodeParser.parse('This is a text[br]with HTML Break.'));
+console.log(new BBCodeParser().parse('This is a text[br]with HTML Break.'));
 ```
 
 **following default BBCodes are supported**
@@ -85,7 +83,7 @@ BBCode                                               | HTML
 You can provide your own BBCodes. The key of the codes object must be a regex part and the value is the replacement.
 
 ```javascript
-import BBCodeParser from 'js-bbcode-parser/src/index.js';
+import BBCodeParser from 'ts-bbcode-parser';
 
 const parser = new BBCodeParser({
     '\\[br\\]': '<br>'

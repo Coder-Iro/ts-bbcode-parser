@@ -73,7 +73,7 @@ export default class BBCode {
       const replacement = codes[regex];
 
       return {
-        regexp: new RegExp(regex, 'igms'),
+        regexp: new RegExp(regex, 'gms'),
         replacement: replacement,
       };
     }, this);

@@ -46,7 +46,7 @@ export default class BBCode {
   /**
    * parse
    */
-  parse(text: string): string {
+  public parse = (text: string): string => {
     return this.codes.reduce(
       (text, code) => text.replace(code.regexp, code.replacement),
       text
@@ -56,7 +56,7 @@ export default class BBCode {
   /**
    * add bb codes
    */
-  add(regex: string, replacement: string): BBCode {
+  public add = (regex: string, replacement: string): BBCode => {
     this.codes.push({
       regexp: new RegExp(regex, 'gms'),
       replacement: replacement,
@@ -68,7 +68,7 @@ export default class BBCode {
   /**
    * set bb codes
    */
-  setCodes(codes: RawCode): BBCode {
+  public setCodes = (codes: RawCode): BBCode => {
     this.codes = Object.keys(codes).map(function (regex) {
       const replacement = codes[regex];
 

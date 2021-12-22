@@ -1,6 +1,6 @@
 {
   "name": "ts-bbcode-parser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple and efficient bbcode parser written in ts.",
   "main": "dist/index.js",
   "type": "module",
